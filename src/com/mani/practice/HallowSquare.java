@@ -13,12 +13,12 @@ public class HallowSquare {
             int totalSize = n * 2 - 1;
 
             for (int outer = 0; outer < totalSize; outer++) {
-                for (int inner = 0; inner < totalSize; inner++) {
+                for (int innerIndex = 0; innerIndex < totalSize; innerIndex++) {
 
                     int top = outer;
-                    int left = inner;
+                    int left = innerIndex;
                     int bottom = (2 * n - 2) - outer;
-                    int right = (2 * n - 2) - inner;
+                    int right = (2 * n - 2) - innerIndex;
 
                     System.out.print(n - Math.min(right, Math.min(bottom, Math.min(top, left))) + " ");
 
